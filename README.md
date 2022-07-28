@@ -47,3 +47,6 @@ Things you may want to cover:
 
 https://journal-app-eja.herokuapp.com/users/sign_in
 
+Email: 1@gmail.com
+Password: password 
+
