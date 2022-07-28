@@ -40,4 +40,10 @@ Things you may want to cover:
 - c. Make dashboard 
 - d. once done, show tasks for today
 
-https://guides.rubyonrails.org/v5.1/active_record_querying.html
+
+### FINALIZED JOURNAL APP ###
+
+- Check the live version below: 
+
+https://journal-app-eja.herokuapp.com/users/sign_in
+
