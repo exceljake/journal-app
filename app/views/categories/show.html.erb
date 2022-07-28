@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
+  <div class="d-flex justify-content-between" style="width:95%;">
+    <%= link_to "TinyThoughts", categories_path, :class => "navbar-brand mb-0 ml-10 h1 font-weight-bold" %>
+    <%= button_to "signout", destroy_user_session_path, method: :delete, :class => "btn btn-danger" %>
+  </div>
+</nav>
+<div class="p-3 mb-2 bg-secondary text-white vh-100 d-flex align-items-center justify-content-center">
+
+<div class="card" style="background-color: #212529; width: 15rem;">
+<div class="card-body">
+    <h5 class="card-title">Category</h5>
+   <%= render "category", category: @category %> 
+  <p>Details: <%= @category.details%></p>
+  <div>
+ <%= link_to "Edit this category", edit_category_path(@category), :class => "btn btn-primary btn-sm" %><br/><br/>
+
+  <%= link_to "Back to categories", categories_path, :class => "btn btn-primary btn-sm" %><br/><br/>
+
+ <%= link_to "Tasks", category_tasks_path(@category.id), :class => "btn btn-primary btn-sm" %><br/><br/>
+
+<%= button_to "Destroy this category", @category, :class => "btn btn-danger btn-sm", method: :delete %><br/><br/>
+</div>
+  </div>
+</div>

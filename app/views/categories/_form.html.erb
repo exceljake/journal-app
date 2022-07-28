@@ -1,0 +1,28 @@
+<%= form_with(model: category, class: 'form-class') do |f| %>
+
+<p>
+  <!-- we can access our controller instance variables here -->
+  <% if @category.errors.any? %>
+    <ul>
+      <% @category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</p>
+
+<p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+</p>
+
+<p>
+    <%= f.label :details %><br/>
+    <%= f.text_field :details %>
+</p>
+
+<p>
+  <button type="button" class="btn btn-primary btn-sm"><%= f.submit class: "bg-transparent shadow-none border-0 text-white"  %></button><br/>
+</p>
+
+<% end %>

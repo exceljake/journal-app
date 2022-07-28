@@ -1,0 +1,40 @@
+<div class="p-3 text-dark vh-100 d-flex justify-content-center align-items-center">
+  <div class="row w-100 p-3 justify-content-center align-items-center">
+    <div class="text-center">
+      <h1 class="font-weight-bold text-primary">TinyThoughts</h1>
+      <h4>Journal App</h4>
+      <p>Where your thoughts are valuable.</p>
+    </div>
+
+    <div class="w-25 p-3">
+      <div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-group">
+          <%= f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control' %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="form-check">
+          <label class="form-check-label">
+            <%= f.check_box :remember_me, class: "form-check-input" %>
+            Remember me
+          </label>
+        </div>
+        <% end -%>
+
+        <div class="form-group justify-content-center align-items-center">
+          <%= f.submit "Log in", class: "btn btn-primary" %>
+        </div>
+       <% end %>
+
+        <div class="text-center">
+        <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

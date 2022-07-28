@@ -1,0 +1,33 @@
+<%= form_with model: [@category, @task] do |f| %>
+
+    <p>
+      <!-- we can access our controller instance variables here -->
+      <% if @task.errors.any? %>
+        <ul>
+          <% @task.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </p>
+    <p>
+        <%= f.label :name %><br/>
+        <%= f.text_field :name %>
+    </p>
+    
+    <p>
+        <%= f.label :description %><br/>
+        <%= f.text_field :description %>
+    </p>
+    
+    <p>
+        <%= f.label :deadline %><br/>
+        <%= f.date_field :deadline %>
+    </p>
+    
+    <p>
+    <button type="button" class="btn btn-primary btn-sm"><%= f.submit class: "bg-transparent shadow-none border-0 text-white"  %></button><br/>
+    </p>
+    
+<% end %>
+    
