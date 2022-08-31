@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  root to: "devise/sessions#new"
-  devise_for :users
-  
+  # namespace :devise do
+    devise_for :user
+  # end
+  # root "devise/sessions#new"
+  # devise_for :users
+  # root "devise/sessions#new"
   resources :categories do
     resources :tasks
   end
-  # root "devise/sessions#new"
+  root "categories#index"
+
 end
