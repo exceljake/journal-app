@@ -1,10 +1,14 @@
 <div class="p-3 text-dark vh-100 d-flex justify-content-center align-items-center">
   <div class="row w-100 p-3 justify-content-center align-items-center">
+    
+    <div class="text-center">
+      <h1 class="font-weight-bold text-primary">TinyThoughts</h1>
+      <h4>Journal App</h4>
+      <p>Sign Up for TinyThoughts</p>
+    </div>
 
-    <div class="w-25 p-3">
+    <div class="p-3" style="width: 320px;">
       <div>
-        <h3 class="text-center">Sign Up for <br> <span class="font-weight-bold text-primary">TinyThoughts</span></h3>
-
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render partial: 'devise/shared/error_messages', resource: resource %>
 
@@ -13,15 +17,15 @@
         </div>
 
         <div class="form-group">
-          <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control mt-2', placeholder: 'Password' %>
         </div>
 
         <div class="form-group">
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password' %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control mt-2', placeholder: 'Confirm Password' %>
         </div>
 
         <div class="form-group">
-          <%= f.submit "Sign up", class: "btn btn-primary" %>
+          <%= f.submit "Sign up", class: "btn btn-primary mt-2 w-100" %>
         </div>
         <% end %>
 
